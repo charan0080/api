@@ -12,6 +12,7 @@
         if (!res.ok) throw new Error('Failed to fetch');
         const json = await res.json() as ApiResponse;
         data = json;    
+        
       } catch (error) {
           error = 'An unknown error occurred';
         }

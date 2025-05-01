@@ -105,7 +105,7 @@ function updateUser() {
     <p>Loading...</p>
   {:else}
     <div class="overflow-x-auto rounded border">
-      <table class="min-w-full bg-white border-collapse">
+      <table class="min-w-full bg-white ">
         <thead>
           <tr class="bg-gray-100 text-left">
             <th class="p-3">
@@ -136,7 +136,7 @@ function updateUser() {
         </thead>
         <tbody>
           {#each users as user}
-            <tr class="border-t hover:bg-gray-50">
+            <tr class="border-t hover:bg-gray-100">
               <td class="p-3">{user.name}</td>
               <td class="p-3 break-words max-w-xs">{user.email}</td>
               <td class="p-3">{user.phone}</td>

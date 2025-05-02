@@ -52,12 +52,12 @@ function updateUser() {
       sortAsc = true;
     }
 
-    users = [...users].sort((a, b) => {
-      const valA = a[field].toLowerCase();
-      const valB = b[field].toLowerCase();
-      return sortAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
-    });
-  }
+      users = [...users].sort((a, b) => {
+        const valA = a[field].toLowerCase();
+        const valB = b[field].toLowerCase();
+        return sortAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+      });
+    }
 
   function openModal() {
     form = { name: '', email: '', phone: '' };
@@ -104,8 +104,8 @@ function updateUser() {
   {:else if users.length === 0}
     <p>Loading...</p>
   {:else}
-    <div class="overflow-x-auto rounded border">
-      <table class="min-w-full bg-white ">
+  <div class="overflow-x-auto rounded border max-w-full">
+    <table class="min-w-full bg-white text-sm sm:text-base">
         <thead>
           <tr class="bg-gray-100 text-left">
             <th class="p-3">
@@ -154,14 +154,14 @@ function updateUser() {
   <!-- MODAL -->
   {#if showModal}
     <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div class="bg-white p-6 rounded-lg w-full max-w-md shadow-lg">
+      <div class="bg-white p-4 sm:p-6 rounded-lg w-full max-w-sm sm:max-w-md shadow-lg mx-2">
         <h2 class="text-xl font-semibold mb-4">Add New User</h2>
         <div class="space-y-4">
           <input type="text" placeholder="Name" bind:value={form.name} class="w-full p-2 border rounded" />
           <input type="email" placeholder="Email" bind:value={form.email} class="w-full p-2 border rounded" />
           <input type="tel" placeholder="Phone" bind:value={form.phone} class="w-full p-2 border rounded" />
         </div>
-        <div class="mt-6 flex justify-end space-x-3">
+        <div class="mt-6 flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-3">
           <button on:click={closeModal} class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
           <button on:click={addUser} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Add</button>
         </div>

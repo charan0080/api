@@ -2,11 +2,11 @@
   import { goto } from '$app/navigation';
 
   function goToLogin() {
-    goto('/login'); // Assuming you have a /login route
+    goto('/login'); 
   }
 
   function goToSignup() {
-    goto('/signup'); // Assuming you have a /signup route
+    goto('/signup');
   }
 </script>
 

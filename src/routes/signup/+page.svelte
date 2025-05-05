@@ -15,11 +15,8 @@
         return;
       }
   
-      // In a real application, you would send this data to a server
-      // to create a new user account.
       console.log('Signing up with:', { email, password });
   
-      // For this example, we'll just simulate success
       successMessage = 'Account created successfully! Redirecting to login...';
       setTimeout(() => {
         successMessage = '';

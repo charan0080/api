@@ -15,7 +15,7 @@
       function login() {
         const index = userlist.indexOf(email);
         if (index !== -1 && passwordlist[index] === password) {
-          goto('/dashboard'); // Replace with your actual route
+          goto('/app/dashboard'); // Replace with your actual route
         } else {
           errorMessage = 'Invalid email or password';
           setTimeout(() => {
@@ -25,7 +25,7 @@
       }
     </script>
     
-    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200">
+    <div class="min-h-screen flex items-center justify-center bg-white">
       <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg space-y-6">
         <div>
           <h2 class="text-3xl font-bold text-gray-800 text-center mb-4">Login</h2>
@@ -68,9 +68,10 @@
           >
             Log In
           </button>
+          
           <div> <button
             type="submit"
-            on:click={signup()}
+            on:click={signup}
             class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-200"
           >sign up </div>
         </form>

@@ -98,9 +98,9 @@
   </script>
   
   <!-- MAIN LAYOUT -->
-  <div class="p-4 sm:p-6 max-w-7xl mx-auto">
+  <div class="p-4 w-full sm:p-6  mx-auto">
     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-3">
-      <h1 class="text-2xl sm:text-3xl font-bold">Users Listing</h1>
+      <h1 class="text-2xl  sm:text-3xl px-4  font-bold">Users Listing</h1>
       <div class="flex gap-2 flex-wrap">
         <input
           type="text"
@@ -108,10 +108,10 @@
           bind:value={searchQuery}
           class="px-4 py-2 border rounded-lg w-full sm:w-60"
         />
-        <button on:click={openModal} class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700">
+        <button on:click={openModal} class="user text-white px-4 py-2 rounded-full ">
           Add User
         </button>
-        <button on:click={() => goto('/')} class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700">
+        <button on:click={() => goto('/')} class="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-700">
           Logout
         </button>
       </div>
@@ -122,7 +122,7 @@
     {:else if users.length === 0}
       <p>Loading...</p>
     {:else}
-      <div class="overflow-x-auto rounded border border-gray-300">
+      <div class="overflow-x-auto w-full rounded border border-gray-300">
         <table class="min-w-full bg-white text-sm sm:text-base">
           <thead>
             <tr class="bg-gray-100 text-left">
@@ -165,7 +165,7 @@
           </tbody>
         </table>
       </div>
-      <button on:click={() => goto('/dashboard')} class="mb-4 text-blue-600 mt-4 hover:text-red-500">
+      <button on:click={() => goto('/app/dashboard')} class="mb-4 text-blue-600 mt-4 hover:text-red-500">
         ← Back to Home
       </button>
     {/if}
@@ -206,3 +206,12 @@
       </div>
     {/if}
   </div>
+  <style>
+    .user{
+      background-color: #89c2d9;
+      transition: background-color 0.3s ease;
+    }
+    .user:hover{
+      background-color: #2a6f97;
+    }
+  </style>

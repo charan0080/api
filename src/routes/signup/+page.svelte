@@ -15,8 +15,6 @@
         return;
       }
   
-      console.log('Signing up with:', { email, password });
-  
       successMessage = 'Account created successfully! Redirecting to login...';
       setTimeout(() => {
         successMessage = '';

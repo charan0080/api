@@ -10,7 +10,7 @@
   }
 </script>
 
-<div class="min-h-screen bg-gradient-to-br from-blue-200 to-indigo-300 flex flex-col justify-center items-center">
+<div class="min-h-screen bg-white flex flex-col justify-center items-center">
   <div class="text-center mb-8">
     <h1 class="text-4xl font-bold text-gray-800 mb-2">Welcome!</h1>
     <p class="text-lg text-gray-600">Join our amazing community or sign in to continue.</p>
